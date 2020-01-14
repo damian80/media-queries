@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Queries</title>
+    <style>
+        h1 {
+            display: none;
+        }
+
+        body {
+            font-family: serif;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            padding: 100px;
+
+        }
+
+        /* smartphones most of them are under 500px width */
+        @media(max-width:500px) {
+            body {
+                background-color: red;
+            }
+
+            #smartphone h1 {
+                display: block;
+            }
+        }
+
+        /* tablets width from 501px to the most common break point 768px width */
+        @media (min-width:501px) and (max-width:768px) {
+            body {
+                background-color: blue;
+            }
+
+            #tablet h1 {
+                display: block;
+            }
+        }
+
+        /* normal width from 769px to the most common break point 1200px width */
+        @media (min-width:769px) and (max-width:1200px) {
+            body {
+                background-color: green;
+            }
+
+            #normal h1 {
+                display: block;
+            }
+        }
+
+        /* widescreen from min-width: 1201px */
+        @media (min-width:1201px) {
+            body {
+                background-color: black;
+            }
+
+            #widescreen h1 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="widescreen">
+        <h1>widescreen</h1>
+    </div>
+    <div id="normal">
+        <h1>normal</h1>
+    </div>
+    <div id="tablet">
+        <h1>tablet</h1>
+    </div>
+    <div id="smartphone">
+        <h1>smartphone</h1>
+    </div>
+    <div id="landscape">
+        <h1>landscape</h1>
+    </div>
+
+</body>
+
+</html>
